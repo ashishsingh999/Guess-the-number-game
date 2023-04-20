@@ -11,7 +11,7 @@ const displayScore = number => {
   document.querySelector('.score').textContent = number;
 };
 
-const resetOnClick = function () {
+const resetOnClick =  () => {
   secretNumber = Math.trunc(Math.random() * 20) + 1;
   score = 20;
   document.querySelector('.guess').value = '';
@@ -22,7 +22,7 @@ const resetOnClick = function () {
   displayScore(score);
 };
 
-const gameLogic = function () {
+const gameLogic =  () => {
   const guess = Number(document.querySelector('.guess').value);
   // When there is no input
   if (!guess) {
